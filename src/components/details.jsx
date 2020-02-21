@@ -1,12 +1,68 @@
 import React, { Component } from 'react';
+import { ProductConsumer } from './context';
+import { Link } from "react-router-dom";
+import { ButtonContainer } from './button';
 
 class Details extends Component {
-    state = {  }
+
     render() { 
         return ( 
-            <div>
-                <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate molestiae quam minus dignissimos. Sequi incidunt eveniet accusamus facere consequatur nobis inventore voluptate tempore, vitae aut rem adipisci error ipsa alias.</div>
-            </div>
+            <ProductConsumer>
+                { value => {
+                    const { id, company, img, info, price, title, inCart } = value.detailProduct;
+                    return (
+                        <div className="container py-5">
+                            {/* title */}
+                            <div className="row">
+                                <div className="col-10 mx-auto text-center text-slanted text-blue">
+                                {title}
+                                </div>
+                            {/* end title */}
+                            {/* product info */}
+                            <div className="row">
+                            <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+                                <img src={img} className="img-fluid" alt="product" />
+                            </div>
+                            <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+                            <h2>model: {title}</h2>
+                            <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
+                                made by: <span className="text-uppercase">{company}</span></h4>
+                                <h4 className="text-blue">
+                                    <strong>
+                                        price: <span>$</span>
+                                        {price}
+                                    </strong>
+                                </h4>
+                                <p className="text-capitalize font-weight-blod mt-3 md-0">
+                                    some info about product
+                                </p>
+                                <p className="text-muted lead">
+                                    {info}
+                                </p>
+                                {/* buttons*/}
+                                <Link to="/">
+                                    <ButtonContainer>
+                                        back to products
+                                    </ButtonContainer>
+                                </Link>                                
+                                <Link to="/">
+                                    <ButtonContainer
+                                    cart
+                                    disabled={inCart?true:false}
+                                    onClick={()=> {
+                                        value.addToCart(id);
+                                        value.openModal(id);
+                                    }}>
+                                        {inCart ? "inCart" : "add to cart"}
+                                    </ButtonContainer>
+                                </Link>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                        )
+                } }
+            </ProductConsumer>
          );
     }
 }

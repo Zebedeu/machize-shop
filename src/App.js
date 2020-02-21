@@ -7,12 +7,13 @@ import {
 } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTrash, faHome, faCartPlus } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NavBar from './components/navBar';
 import ProductList from './components/productList';
 import Default from './components/default';
-import Cart from './components/cart';
+import Cart from './components/cart/cart';
 import Details from './components/details';
+import Modal from './components/modal';
+
 library.add(faTrash, faHome, faCartPlus);
 
 
@@ -37,7 +38,11 @@ class App extends Component {
           <Route exact path="/">
             <ProductList />
           </Route>
+          <Route>
+            <Default />
+          </Route>
         </Switch>
+        <Modal />
       </div>
     </Router>
   );

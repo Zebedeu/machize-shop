@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f02132;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: black;
+  border-radius:0 !important;
+  border:0.1rem solid black !important;
+}
+.btn-black:hover{
+  background: transparent !important;
+  color: white !important;
+}
+.cart-icon {
+  cursor:pointer;
+  font-size:1.2rem;
+  color:red; 
+}
+
+
