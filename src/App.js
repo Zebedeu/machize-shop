@@ -13,6 +13,9 @@ import Default from './components/default';
 import Cart from './components/cart/cart';
 import Details from './components/details';
 import Modal from './components/modal';
+import Checkout from './components/cart/checkout';
+import Footer from './components/footer';
+import Dashboard from './components/cart/dashboard';
 
 library.add(faTrash, faHome, faCartPlus);
 
@@ -35,6 +38,12 @@ class App extends Component {
           <Route path="/cart">
             <Cart />
           </Route>
+          <Route exact path="/checkout">
+            <Checkout />
+          </Route>
+          <Route exact path="/dashboard">
+            <Dashboard />
+          </Route>
           <Route exact path="/">
             <ProductList />
           </Route>
@@ -43,6 +52,7 @@ class App extends Component {
           </Route>
         </Switch>
         <Modal />
+        <Footer />
       </div>
     </Router>
   );

@@ -27,7 +27,7 @@ class ProductProvider extends Component {
         })
     }
     getItem =(id) => {
-        const product = this.state.products.find(item =>item.id ===id );
+        const product = this.state.products.find(item =>item.id === id );
         return product; 
     }
     handleDetail = (id) =>  {
@@ -139,6 +139,11 @@ class ProductProvider extends Component {
             }
         })
     }
+
+    getNumberItem = id => {
+        const product = this.state.products.find(item =>item.id === id );
+        console.log(product); 
+    }
     render() { 
         return ( 
             <ProductContext.Provider value={
@@ -150,7 +155,8 @@ class ProductProvider extends Component {
             increment:this.increment,
             descrement:this.descrement,
             removeItem:this.removeItem,
-            clearCart:this.clearCart
+            clearCart:this.clearCart,
+            getNumberItem:this.getNumberItem
         }
             }>
                 {this.props.children}

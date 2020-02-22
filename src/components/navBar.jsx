@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import logo from './../logo.svg'
 import {  Link } from "react-router-dom";
 import { ButtonContainer } from './button';
+import CartButton from './cart/cartbutton';
 class NavBar extends Component {
     state = {  }
     render() { 
@@ -18,13 +17,7 @@ class NavBar extends Component {
             </ul>
             <Link to="/cart" className="ml-auto">
                 <ButtonContainer>
-                <span>
-                    <FontAwesomeIcon 
-                    className="faIcons"
-                     icon="cart-plus" />
-                     My Cart
-
-                </span>
+                <CartButton />
                 </ButtonContainer>
             </Link>
             </nav>            

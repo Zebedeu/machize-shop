@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ButtonContainer } from '../button';
+import Checkout from './checkout';
 
 export default function CartTotal({value}) {
         const {cartSubTotal, cartTax, cartTotal, clearCart} =value;
         return <React.Fragment>
-            <div className="co">
+            <div className="col">
                 <div className="row">
                     <div className="col-10 mt-2 ml-sm-5 ml-md-auto col-sm-8 text-capitalize text-right">
                         <Link to="/">
@@ -23,6 +25,12 @@ export default function CartTotal({value}) {
                         <h5><span className="text-title">total: </span>
                         <strong>$ {cartTotal}</strong>
                         </h5>
+                        <Link to="/checkout">
+                        <ButtonContainer>
+                        Checkout
+                    </ButtonContainer>
+                    </Link>
+
                     </div>
                 </div>
             </div>

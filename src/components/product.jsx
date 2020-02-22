@@ -102,7 +102,7 @@ const ProductWrapper = styled.div `
         transform: translate(0, 0);
     }
     .cart-btn:hover {
-        color: blue;
+        color: black;
         cursor: pointer;
     }
 `;
