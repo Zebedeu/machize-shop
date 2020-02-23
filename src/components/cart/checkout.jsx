@@ -48,7 +48,9 @@ class Checkout extends Component {
         <div className="input-group">
           <input type="text" className="form-control" placeholder="Promo code" />
           <div className="input-group-append">
-            <button type="submit" className="btn btn-secondary">Redeem</button>
+            <ButtonContainer className="btn btn-secondary">
+            Redeem
+            </ButtonContainer>
           </div>
         </div>
       </form>
