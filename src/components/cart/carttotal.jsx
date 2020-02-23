@@ -25,7 +25,7 @@ export default function CartTotal({value}) {
                         <strong>$ {cartTotal}</strong>
                         </h5>
                         <Link to="/checkout">
-                        <ButtonContainer>
+                        <ButtonContainer className="btn btn-sm btn-info mr-4">
                         Checkout
                     </ButtonContainer>
                     </Link>

@@ -41,12 +41,12 @@ class Details extends Component {
                                 </p>
                                 {/* buttons*/}
                                 <Link to="/">
-                                    <ButtonContainer>
+                                    <ButtonContainer className="btn btn-sm btn-info mr-4">
                                         back to products
                                     </ButtonContainer>
                                 </Link>                                
                                 <Link to="/">
-                                    <ButtonContainer
+                                    <ButtonContainer className="btn btn-sm btn-danger mr-4"
                                     cart
                                     disabled={inCart?true:false}
                                     onClick={()=> {

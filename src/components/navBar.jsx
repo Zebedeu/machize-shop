@@ -16,7 +16,7 @@ class NavBar extends Component {
                 </li>
             </ul>
             <Link to="/cart" className="ml-auto">
-                <ButtonContainer>
+                <ButtonContainer className="btn btn-sm btn-info mr-4">
                 <CartButton />
                 </ButtonContainer>
             </Link>
