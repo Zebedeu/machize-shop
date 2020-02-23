@@ -9,7 +9,7 @@ export default function MyList({ item, value }) {
                 <h6 className="my-0">{title}</h6>
                 <span className="text-muted">$ {price}</span>
                 <span className="text-muted">Qty {count}</span>
-                <img src={img} className="col-lg-3" alt="product" />
+                <img src={img} className="col-lg-3 my-img" alt="product" />
             </li>
         </div>
 

@@ -8,7 +8,7 @@ export default function CartButton (){
                     <FontAwesomeIcon 
                     className="faIcons"
                      icon="cart-plus" />
-                     My Cart
+                      My Cart
                 </span> 
             </React.Fragment>
          );

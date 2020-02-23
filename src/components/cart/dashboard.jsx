@@ -40,7 +40,7 @@ class Dashboard extends Component {
                                             <i className="ni location_pin mr-2"></i>Luanda, Angola
 </div>
                                         <div className="h5 mt-4">
-                                            <i className="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
+                                            <i className="ni business_briefcase-24 mr-2"></i>Solution Manager - MACHIZE
 </div>
                                         <div>
                                             <i className="ni education_hat mr-2"></i>University of Computer Science
