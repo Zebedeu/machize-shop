@@ -3,6 +3,8 @@ import { ProductConsumer } from './../context';
 import { Link } from "react-router-dom";
 import { ButtonContainer } from './../button';
 import ItemTitle from './itemTitle';
+import Country from '../checkout/country';
+
 
 class Checkout extends Component {
 
@@ -106,26 +108,7 @@ class Checkout extends Component {
         </div>
 
         <div className="row">
-          <div className="col-md-5 mb-3">
-            <label htmlFor="country">Country</label>
-            <select className="custom-select d-block w-100" id="country" required="">
-              <option defaultValue="">Choose...</option>
-              <option>United States</option>
-            </select>
-            <div className="invalid-feedback">
-              Please select a valid country.
-            </div>
-          </div>
-          <div className="col-md-4 mb-3">
-            <label htmlFor="state">State</label>
-            <select className="custom-select d-block w-100" id="state" required="">
-              <option defaultValue="">Choose...</option>
-              <option>California</option>
-            </select>
-            <div className="invalid-feedback">
-              Please provide a valid state.
-            </div>
-          </div>
+          <Country />
           <div className="col-md-3 mb-3">
             <label htmlFor="zip">Zip</label>
             <input type="text" className="form-control" id="zip" placeholder="" required="" />

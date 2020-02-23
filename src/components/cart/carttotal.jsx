@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ButtonContainer } from '../button';
-import Checkout from './checkout';
 
 export default function CartTotal({value}) {
         const {cartSubTotal, cartTax, cartTotal, clearCart} =value;
