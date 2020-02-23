@@ -11,8 +11,11 @@ class NavBar extends Component {
             <Link to="/">
             </Link>
             <ul className="navbar-nav align-items-center">
-                <li className="nav-item ml-5">
+            <li className="nav-item ml-5">
                 <Link to="/" className="nav-link">Home</Link>
+                </li>
+                <li className="nav-item ml-5">
+                <Link to="/dashboard" className="nav-link">MY Accout</Link>
                 </li>
             </ul>
             <Link to="/cart" className="ml-auto">
